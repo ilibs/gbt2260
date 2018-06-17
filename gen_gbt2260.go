@@ -27,6 +27,6 @@ func CreateGBT2260Table() {
 		name := record[1]
 		line = line + "{\"" + code + "\",\"" + name + "\"},"
 	}
-	content := "package gbt2260;func GetGbt2260Table() [][]string {gbt2260Table := [][]string{" + line + "};return gbt2260Table;}"
-	ioutil.WriteFile("gbt2260Table.go", []byte(content), 0666)
+	content := "package gbt2260\nvar gbt2260Table = [][]string{" + line + "}"
+	ioutil.WriteFile("gbt2260_table.go", []byte(content), 0644)
 }

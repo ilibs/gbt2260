@@ -10,7 +10,6 @@ type BGT2260 struct{}
 var trie = New()
 
 func NewGBT2260() *BGT2260 {
-	gbt2260Table := GetGbt2260Table()
 	for _, cell := range gbt2260Table {
 		createTrieTree(cell[0], cell[1], trie)
 	}
